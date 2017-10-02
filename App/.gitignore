@@ -53,4 +53,4 @@ fastlane/Preview.html
 fastlane/screenshots
 
 #Own files
-artifacts
+artifacts/

@@ -4,14 +4,34 @@
  * @flow
  */
 
-import { AppRegistry, StyleSheet, Text, View } from 'react-native'
+import React, { Component } from 'react'
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native'
 
-import React from 'react'
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>
+          Welcome to React Native!
+        </Text>
+        <Text style={styles.instructions}>
+          To get started, edit index.ios.js
+        </Text>
+        <Text style={styles.instructions}>
+          Press Cmd+R to reload,{'\n'}
+          Cmd+D or shake for dev menu
+        </Text>
+      </View>
+    );
+  }
+}
 
-export interface Props { }
-export interface State { }
-
-const styles: any = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -30,23 +50,4 @@ const styles: any = StyleSheet.create({
   }
 })
 
-export default class Todo extends React.Component<Props, State> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Fr-2-React Native! (in TypeScript)
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    )
-  }
-}
-
-AppRegistry.registerComponent('App', () => Todo)
+AppRegistry.registerComponent('App', () => App)

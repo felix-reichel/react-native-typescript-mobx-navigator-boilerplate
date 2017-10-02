@@ -1,50 +1,50 @@
 {
-  "name": "app",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "watch": "npm run build -- -w",
-    "start:ios": "npm run build && concurrently -r 'npm run watch' 'react-native run-ios'",
-    "start:android": "npm run build && concurrently -r 'npm run watch' 'react-native run-android'",
-    "tsc": "tsc",
-    "clean": "rm -rf artifacts/*",
-    "build": "npm run clean && npm run tsc --",
-    "lint": "tslint src/**/*.ts",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest --coverage"
-  },
-  "dependencies": {
-    "mobx": "^3.3.0",
-    "mobx-react": "^4.3.3",
-    "react": "^16.0.0",
-    "react-native": "^0.48.4",
-    "react-native-ble-plx": "^0.6.2"
-  },
-  "devDependencies": {
-    "@types/jest": "^21.1.1",
-    "@types/react": "^16.0.7",
-    "@types/react-native": "^0.48.9",
-    "babel-jest": "21.2.0",
-    "babel-preset-react-native": "4.0.0",
-    "concurrently": "^3.5.0",
-    "jest": "21.2.1",
-    "react-test-renderer": "16.0.0-alpha.12",
-    "rimraf": "^2.6.2",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
-  },
-  "jest": {
-    "preset": "react-native",
-    "testRegex": "artifacts/.+\\.(test|spec).js$",
-    "coverageDirectory": "coverage",
-    "coverageReporters": [
-      "text-summary",
-      "html"
-    ],
-    "collectCoverageFrom": [
-      "artifacts/**/*.js",
-      "!artifacts/**/*.spec.js",
-      "!artifacts/**/*.index.js"
-    ]
-  }
+	"name": "app",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest --coverage",
+		"tsc": "tsc",
+		"clean": "rimraf artifacts",
+		"build": "npm run clean && npm run tsc --",
+		"lint": "tslint src/**/*.ts",
+		"watch": "npm run build -- -w",
+		"start:ios": "npm run build && concurrently -r 'npm run watch' 'react-native run-ios'",
+		"start:android": "npm run build && concurrently -r 'npm run watch' 'react-native run-android'"
+	},
+	"dependencies": {
+		"mobx": "^3.3.0",
+		"mobx-react": "^4.3.3",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.48.4",
+		"react-navigation": "^1.0.0-beta.13"
+	},
+	"devDependencies": {
+		"@types/jest": "^21.1.1",
+		"@types/react": "^16.0.7",
+		"@types/react-native": "^0.48.9",
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
+		"concurrently": "^3.5.0",
+		"jest": "21.2.1",
+		"react-test-renderer": "16.0.0-alpha.12",
+		"rimraf": "^2.6.2",
+		"tslint": "^5.7.0",
+		"typescript": "^2.5.3"
+	},
+	"jest": {
+		"preset": "react-native",
+		"testRegex": "artifacts/.+\\.(test|spec).js$",
+		"coverageDirectory": "coverage",
+		"coverageReporters": [
+			"text-summary",
+			"html"
+		],
+		"collectCoverageFrom": [
+			"artifacts/**/*.js",
+			"!artifacts/**/*.spec.js",
+			"!artifacts/**/*.index.js"
+		]
+	}
 }

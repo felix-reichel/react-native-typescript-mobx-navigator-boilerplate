@@ -7,6 +7,7 @@
 import { AppRegistry, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {observer} from 'mobx-react'
+import App from './mobx-example/App'
 
 export interface Props { }
 export interface State { }
@@ -34,6 +35,7 @@ const styles: any = StyleSheet.create({
 export default class Todo extends React.Component<Props, State> {
   render() {
     return (
+      /*
       <View style={styles.container}>
         <Text style={styles.welcome}>
           Welcome to Fr-2-React Native! (in TypeScript)
@@ -46,6 +48,9 @@ export default class Todo extends React.Component<Props, State> {
           Cmd+D or shake for dev menu
         </Text>
       </View>
+      */
+      <App>
+      </App>
     )
   }
 }

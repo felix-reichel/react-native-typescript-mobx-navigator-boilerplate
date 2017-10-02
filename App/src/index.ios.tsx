@@ -5,8 +5,8 @@
  */
 
 import { AppRegistry, StyleSheet, Text, View } from 'react-native'
-
 import React from 'react'
+import {observer} from 'mobx-react'
 
 export interface Props { }
 export interface State { }
@@ -30,6 +30,7 @@ const styles: any = StyleSheet.create({
   }
 })
 
+@observer
 export default class Todo extends React.Component<Props, State> {
   render() {
     return (
